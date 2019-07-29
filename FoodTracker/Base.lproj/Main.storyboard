@@ -47,6 +47,7 @@
                                     <outlet property="nameLabel" destination="en1-5x-oA4" id="2L6-Ni-Qvm"/>
                                     <outlet property="photoImageView" destination="KH0-JJ-pYh" id="uUh-MA-Vhv"/>
                                     <outlet property="ratingControl" destination="Mtc-tD-hdj" id="I6o-jz-43K"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="e0J-kF-9Hf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,17 +76,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-Gc-P1r">
-                                <rect key="frame" x="20" y="108" width="374" height="456"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-Gc-P1r">
+                                <rect key="frame" x="20" y="108" width="540" height="450"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rr-Dv-ZPo">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="3wJ-iI-K1r">
-                                        <rect key="frame" x="0.0" y="38" width="374" height="360"/>
+                                        <rect key="frame" x="0.0" y="38" width="540" height="360"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="360" id="RyN-OC-82v"/>
@@ -96,8 +97,8 @@
                                             <outletCollection property="gestureRecognizers" destination="kGZ-eD-WD2" appends="YES" id="3Hh-QO-ibr"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VPI-Me-oMu" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="61" y="406" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VPI-Me-oMu" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="144" y="406" width="252" height="44"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="5"/>
@@ -181,10 +182,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0A6-r9-3eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1142" y="523"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="e0J-kF-9Hf"/>
+    </inferredMetricsTieBreakers>
 </document>
